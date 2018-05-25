@@ -16,7 +16,11 @@
         <a
           href="https://github.com/nuxt/nuxt.js"
           target="_blank"
-          class="button--grey">GitHub</a>
+          class="button--grey">GitHub</a>        
+      </div>
+      <div class="page-link">
+        <nuxt-link to="/demo/counter">计数器</nuxt-link>
+        <nuxt-link to="/demo/5">id</nuxt-link>
       </div>
     </div>
   </section>
@@ -45,7 +49,7 @@ export default {
   font-family: "Quicksand", "Source Sans Pro", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif; /* 1 */
   display: block;
   font-weight: 300;
-  font-size: 100px;
+  font-size: 40px;
   color: #35495e;
   letter-spacing: 1px;
 }
@@ -60,5 +64,17 @@ export default {
 
 .links {
   padding-top: 15px;
+}
+.page-link {
+  margin-top: 20px;
+}
+.page-link a {
+  display: inline-block;
+  border-radius: 4px;
+  border: 1px solid #35495e;
+  color: #35495e;
+  text-decoration: none;
+  padding: 10px 30px;
+  margin-left: 15px;
 }
 </style>
