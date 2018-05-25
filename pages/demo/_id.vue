@@ -11,6 +11,7 @@
 </template>
 
 <script>
+import axios from 'axios'
 
 export default {
   asyncData (context) {
@@ -18,6 +19,12 @@ export default {
     return {
       myId: id
     } 
+  },
+  async fetch (context) {
+    // console.log('fetch', context)
+    let { data } = await axios.get('https://m.tking.cn/showapi/pub/site/1001/topMarketingShows?siteCityOID=3101&time=1527228379921&src=m_web')
+    console.log('fetch', data)
+    context.store.commit('demo/setCounter', 10)
   },
   data () {
     return {

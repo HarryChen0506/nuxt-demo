@@ -17,9 +17,10 @@ export const mutations =  {
 }
 
 export const actions = {
-  editCounter (context, value) {
+  editCounter (store, value) {
+    console.log('actions context', store)
     setTimeout(() => {
-      context.commit('setCounter', value)
+      store.commit('setCounter', value)
     }, 1000)
   }
 }
