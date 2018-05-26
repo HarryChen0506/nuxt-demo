@@ -14,6 +14,12 @@ module.exports = {
     ]
   },
   /*
+  ** Global CSS
+  */
+  css: [
+    'element-ui/lib/theme-chalk/index.css'
+  ],
+  /*
   ** Customize the progress bar color
   */
   loading: { color: '#3B8070' },
@@ -34,5 +40,8 @@ module.exports = {
         })
       }
     }
-  }
+  },
+  plugins: [
+    { src: '~/plugins/element-ui', ssr: true }
+  ]
 }
